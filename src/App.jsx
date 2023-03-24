@@ -3,6 +3,7 @@ import Navbar from './Components/Navbar'
 import Home from './Pages/Home'
 import Beer from './Pages/Beer'
 import Contacto from './Pages/Contacto'
+import NotFound from './Pages/NotFound'
 function App() {
   return (
    <div>
@@ -11,7 +12,8 @@ function App() {
         <Routes>
           <Route path='/' element={<Home/>} />          
           <Route path='/contacto' element={<Contacto/>} />
-          <Route path='/beer' element={<Beer/>} />                                               
+          <Route path='/beer/:id' element={<Beer/>} />                                               
+          <Route path='*' element={<NotFound/>} />                                               
         </Routes>
    </div>
   )
